@@ -1,0 +1,12 @@
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\bin\Debug\net5.0\GoWebApp.Shared.deps.json
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\bin\Debug\net5.0\GoWebApp.Shared.dll
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\bin\Debug\net5.0\ref\GoWebApp.Shared.dll
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\bin\Debug\net5.0\GoWebApp.Shared.pdb
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.csprojAssemblyReference.cache
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.AssemblyInfoInputs.cache
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.AssemblyInfo.cs
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.csproj.CoreCompileInputs.cache
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.dll
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\ref\GoWebApp.Shared.dll
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.pdb

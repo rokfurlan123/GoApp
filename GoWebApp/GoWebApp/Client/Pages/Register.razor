@@ -1,0 +1,43 @@
+﻿@page "/register"
+@using GoWebApp.Shared
+@inject NavigationManager _navManager
+<h3>Register</h3>
+
+<EditForm Model="@user" OnValidSubmit="HandleUserRegistration">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <InputText id="username" @bind-Value="user.Email"></InputText>
+        <ValidationMessage For="@(()=> user.Email)"></ValidationMessage>
+    </div>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <InputText id="username" @bind-Value="user.Username"></InputText>
+        <ValidationMessage For="@(()=> user.Username)"></ValidationMessage>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <InputText id="username" @bind-Value="user.Password"></InputText>
+        <ValidationMessage For="@(()=> user.Password)"></ValidationMessage>
+    </div>
+    <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <InputText id="username" @bind-Value="user.ConfirmPassword"></InputText>
+        <ValidationMessage For="@(()=> user.ConfirmPassword)"></ValidationMessage>
+    </div>
+    <div class="form-group">
+        <label for="date">Date of Birth</label>
+        <InputDate id="datetime" @bind-Value="user.DateOfBirth"></InputDate>
+        <ValidationMessage For="@(()=> user.DateOfBirth)"></ValidationMessage>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</EditForm>
+
+
+@code {
+    private ProfileRegister user = new ProfileRegister();
+    void HandleUserRegistration()
+    {
+        _navManager.NavigateTo("/login");
+    }
+}

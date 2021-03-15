@@ -1,0 +1,34 @@
+﻿@page "/login"
+@using GoWebApp.Shared
+
+<h3>Login</h3>
+
+<EditForm Model="@user" OnValidSubmit="HandleLogin">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <p>
+        <label>
+            Username
+        </label>
+        <div>
+            <InputText id="username" @bind-Value="user.Username"></InputText>
+        </div>
+    </p>
+    <p>
+        <label>
+            Password
+        </label>
+        <div>
+            <InputText id="password" @bind-Value="user.Password"></InputText>
+        </div>
+    </p>
+    <button type="submit" class="btn">Login</button>
+    <ValidationSummary></ValidationSummary>
+</EditForm>
+@code {
+    private ProfileLogIn user = new ProfileLogIn();
+
+    private void HandleLogin()
+    {
+        
+    }
+}
