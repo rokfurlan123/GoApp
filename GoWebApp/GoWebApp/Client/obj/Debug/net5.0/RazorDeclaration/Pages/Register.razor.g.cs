@@ -83,6 +83,13 @@ using GoWebApp.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\_Imports.razor"
+using Microsoft.AspNetCore.Components.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Register.razor"
 using GoWebApp.Shared;
 
@@ -98,17 +105,18 @@ using GoWebApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Register.razor"
+#line 37 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Register.razor"
        
     private ProfileRegister user = new ProfileRegister();
     void HandleUserRegistration()
     {
-
+        _navManager.NavigateTo("/login");
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager _navManager { get; set; }
     }
 }
 #pragma warning restore 1591

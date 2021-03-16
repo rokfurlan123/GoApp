@@ -427,12 +427,9 @@ D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
-D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\9nD+MISX.gz
-D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\qrj+8xa6.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\iLxJS4mp.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\rCyGPDTK.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\9l5gmc+O.gz
-D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\5mErfzL1.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\hT551I8k.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\6UDDaZxA.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\mP6qpQ+1.gz
@@ -634,3 +631,9 @@ D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\GoWebApp.Client.dll
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\ref\GoWebApp.Client.dll
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\GoWebApp.Client.pdb
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\DKqNPg60.gz
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\WdvufV9n.gz
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\tzqTkIU+.gz
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\IZXzal2O.gz

@@ -83,6 +83,13 @@ using GoWebApp.Client.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\_Imports.razor"
+using Microsoft.AspNetCore.Components.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Login.razor"
 using GoWebApp.Shared;
 
