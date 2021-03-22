@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "6MoCPEX7oAAYUdAZcjYJm+KizHvPrVwfDcs9fgLhjfDAfWT4DeERRs6JRmHxc53czbjirtZTHL+DPPL2mSSbYg==",
+  "dgSpecHash": "7DF+6VHtlEcrNrW0IXLKVK8WDlZTY0l6GtTX+lcj7VrOGP9bSnMGR/pF5hlNd5ToRYkuCTktoAm9MmWKkSoYpQ==",
   "success": true,
   "projectFilePath": "D:\\Namizje\\githubstuff\\GoWebApp\\GoApp\\GoWebApp\\GoWebApp\\Server\\GoWebApp.Server.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\rokfu\\.nuget\\packages\\blazored.localstorage\\3.0.0\\blazored.localstorage.3.0.0.nupkg.sha512",
     "C:\\Users\\rokfu\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.4\\microsoft.aspnetcore.authorization.5.0.4.nupkg.sha512",
     "C:\\Users\\rokfu\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.4\\microsoft.aspnetcore.components.5.0.4.nupkg.sha512",
     "C:\\Users\\rokfu\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\5.0.4\\microsoft.aspnetcore.components.analyzers.5.0.4.nupkg.sha512",

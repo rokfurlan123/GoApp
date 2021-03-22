@@ -59,3 +59,4 @@ D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Server\obj\Debug\net5.0\
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Server\obj\Debug\net5.0\GoWebApp.Server.pdb
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Server\obj\Debug\net5.0\GoWebApp.Server.genruntimeconfig.cache
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Authorization.dll
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Server\bin\Debug\net5.0\Blazored.LocalStorage.dll

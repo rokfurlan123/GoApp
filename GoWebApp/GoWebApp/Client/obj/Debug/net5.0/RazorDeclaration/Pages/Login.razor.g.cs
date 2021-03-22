@@ -90,13 +90,12 @@ using Microsoft.AspNetCore.Components.Authorization;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Login.razor"
+#line 12 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\_Imports.razor"
 using GoWebApp.Shared;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/login")]
     public partial class Login : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -109,14 +108,17 @@ using GoWebApp.Shared;
        
     private ProfileLogIn user = new ProfileLogIn();
 
-    private void HandleLogin()
+    private async void HandleLogin()
     {
-        
+        await _localStorage.SetItemAsync<bool>("isAuthenticated", true);
+        await _authStateProvider.GetAuthenticationStateAsync();
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AuthenticationStateProvider _authStateProvider { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ILocalStorageService _localStorage { get; set; }
     }
 }
 #pragma warning restore 1591
