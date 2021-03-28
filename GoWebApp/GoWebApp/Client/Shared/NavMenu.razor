@@ -1,4 +1,8 @@
-﻿<AuthorizeView>
+﻿@inject Blazored.LocalStorage.ILocalStorageService _localStorage
+@inject AuthenticationStateProvider _authStateProvider
+@inject NavigationManager _navManager  
+
+<AuthorizeView>
     <Authorized>
         <div class="top-row pl-4 navbar navbar-dark">
             <a class="navbar-brand" href="">GoWebApp</a>
@@ -10,25 +14,19 @@
         <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
             <ul class="nav flex-column">
                 <li class="nav-item px-3">
-                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                        <span class="oi oi-home" aria-hidden="true"></span> Home
+                    <NavLink class="nav-link" href="/profile" Match="NavLinkMatch.All">
+                        <span class="oi oi-home" aria-hidden="true"></span> Profile
                     </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link" @onclick="Logout" style="cursor:pointer">
+                        <span class="oi oi-account-logout" aria-hidden="true"></span>Logout        
+                    </a>
                 </li>
             </ul>
         </div>
     </Authorized>
-    <NotAuthorized>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="/login" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Login
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="/register" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Register
-            </NavLink>
-        </li>
-    </NotAuthorized>
+    <NotAuthorized></NotAuthorized>
 </AuthorizeView>
 
 
@@ -40,5 +38,12 @@
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+    }
+
+    private async void Logout()
+    {
+        await _localStorage.RemoveItemAsync("isAuthenticated");
+        await _authStateProvider.GetAuthenticationStateAsync();
+        _navManager.NavigateTo("/");
     }
 }

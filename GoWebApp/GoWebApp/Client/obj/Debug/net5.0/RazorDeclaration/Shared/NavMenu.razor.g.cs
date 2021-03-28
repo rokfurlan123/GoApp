@@ -91,6 +91,13 @@ using Microsoft.AspNetCore.Components.Authorization;
 #nullable disable
 #nullable restore
 #line 12 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\_Imports.razor"
+using Microsoft.AspNetCore.Authorization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\_Imports.razor"
 using GoWebApp.Shared;
 
 #line default
@@ -104,7 +111,7 @@ using GoWebApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 35 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Shared\NavMenu.razor"
+#line 33 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
@@ -115,9 +122,19 @@ using GoWebApp.Shared;
         collapseNavMenu = !collapseNavMenu;
     }
 
+    private async void Logout()
+    {
+        await _localStorage.RemoveItemAsync("isAuthenticated");
+        await _authStateProvider.GetAuthenticationStateAsync();
+        _navManager.NavigateTo("/");
+    }
+
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager _navManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AuthenticationStateProvider _authStateProvider { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ILocalStorageService _localStorage { get; set; }
     }
 }
 #pragma warning restore 1591

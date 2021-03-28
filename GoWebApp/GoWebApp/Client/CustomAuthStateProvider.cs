@@ -18,21 +18,22 @@ namespace GoWebApp.Client
         }
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
         {
-            return new AuthenticationState(new ClaimsPrincipal());
+            var state = new AuthenticationState(new ClaimsPrincipal());
+
             if (await _localStorageService.GetItemAsync<bool>("isAuthenticated"))
             {
                var identity = new ClaimsIdentity(
-               new[]
-               {
+                new[]
+                {
                     new Claim(ClaimTypes.Name, "Neki")
-               }, "test authentication type");
-                var user = new ClaimsPrincipal(identity);
-                var state = new AuthenticationState(user);
+                }, "test authentication type");
 
-                NotifyAuthenticationStateChanged(Task.FromResult(state));
-                return state;
+               var user = new ClaimsPrincipal(identity);
+               state = new AuthenticationState(user);
+                
             }
-            return new AuthenticationState(new ClaimsPrincipal());
+            NotifyAuthenticationStateChanged(Task.FromResult(state));
+            return state;
         }
     }
 }   
