@@ -103,6 +103,20 @@ using GoWebApp.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\_Imports.razor"
+using Blazored.Toast;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\_Imports.razor"
+using Blazored.Toast.Services;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/login")]
     public partial class Login : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -112,19 +126,30 @@ using GoWebApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Login.razor"
+#line 30 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Login.razor"
        
     private ProfileLogIn user = new ProfileLogIn();
 
     private async void HandleLogin()
     {
-        await _localStorage.SetItemAsync<bool>("isAuthenticated", true);
-        await _authStateProvider.GetAuthenticationStateAsync();
+        var result = await _authService.Login(user);
+        if(result.Success)
+        {
+            await _localStorage.SetItemAsync<bool>("isAuthenticated", true);
+            await _authStateProvider.GetAuthenticationStateAsync();
+        }
+        else
+        {
+            _toastService.ShowError(result.Message);
+        }
+
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IToastService _toastService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private GoWebApp.Client.Services.IAuthService _authService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private AuthenticationStateProvider _authStateProvider { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private Blazored.LocalStorage.ILocalStorageService _localStorage { get; set; }
     }

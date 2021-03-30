@@ -1,6 +1,8 @@
 ﻿@page "/login" 
 @inject Blazored.LocalStorage.ILocalStorageService _localStorage
 @inject AuthenticationStateProvider _authStateProvider
+@inject GoWebApp.Client.Services.IAuthService _authService
+@inject IToastService _toastService
 
 Log in or <NavLink href="register">register</NavLink>
 
@@ -11,7 +13,7 @@ Log in or <NavLink href="register">register</NavLink>
             Username
         </label>
         <div>
-            <InputText id="username" @bind-Value="user.Username"></InputText>
+            <InputText id="email" @bind-Value="user.Email"></InputText>
         </div>
     </p>
     <p>
@@ -30,7 +32,16 @@ Log in or <NavLink href="register">register</NavLink>
 
     private async void HandleLogin()
     {
-        await _localStorage.SetItemAsync<bool>("isAuthenticated", true);
-        await _authStateProvider.GetAuthenticationStateAsync();
+        var result = await _authService.Login(user);
+        if(result.Success)
+        {
+            await _localStorage.SetItemAsync<bool>("isAuthenticated", true);
+            await _authStateProvider.GetAuthenticationStateAsync();
+        }
+        else
+        {
+            _toastService.ShowError(result.Message);
+        }
+
     }
 }

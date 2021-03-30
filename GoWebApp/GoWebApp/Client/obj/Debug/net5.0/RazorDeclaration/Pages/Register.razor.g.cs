@@ -97,6 +97,20 @@ using Microsoft.AspNetCore.Authorization;
 #line hidden
 #nullable disable
 #nullable restore
+#line 14 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\_Imports.razor"
+using Blazored.Toast;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 15 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\_Imports.razor"
+using Blazored.Toast.Services;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Register.razor"
 using GoWebApp.Shared;
 
@@ -112,17 +126,29 @@ using GoWebApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 37 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Register.razor"
+#line 41 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Register.razor"
        
     private ProfileRegister user = new ProfileRegister();
-    void HandleUserRegistration()
+
+    async void HandleUserRegistration()
     {
-        _navManager.NavigateTo("/login");
+        var result = await _authService.Register(user);
+        if (result.Success)
+        {
+            _toastService.ShowSuccess(result.Message);
+            _navManager.NavigateTo("");
+        }
+        else
+        {
+            _toastService.ShowError(result.Message);
+        }
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IToastService _toastService { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private GoWebApp.Client.Services.IAuthService _authService { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager _navManager { get; set; }
     }
 }

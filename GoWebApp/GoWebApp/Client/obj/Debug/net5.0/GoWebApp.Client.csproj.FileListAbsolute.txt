@@ -425,9 +425,6 @@ D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
-D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\iLxJS4mp.gz
-D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\rCyGPDTK.gz
-D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\9l5gmc+O.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\hT551I8k.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\6UDDaZxA.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\mP6qpQ+1.gz
@@ -442,8 +439,6 @@ D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\klqsKJ7K.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\bv2tLs9l.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\hW4B+IGh.gz
-D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\XzwaDHa0.gz
-D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\Sn+XCWFI.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\FQkB+sH9.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\nOwEGNOI.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\staticwebassets\GoWebApp.Client.StaticWebAssets.Manifest.cache
@@ -642,3 +637,11 @@ D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\bin\Debug\net5.0\
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\mzjm8mk+.gz
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\RazorDeclaration\Pages\Profile.razor.g.cs
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\Razor\Pages\Profile.razor.g.cs
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\bin\Debug\net5.0\wwwroot\_framework\Blazored.Toast.dll.gz
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\bin\Debug\net5.0\wwwroot\_framework\Blazored.Toast.dll
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\3fmjn+DV.gz
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\9BXeNFkl.gz
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\Yh6pMv3f.gz
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\7CMtwqDk.gz
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\dPDsXpaW.gz
+D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\5GuWQAsZ.gz

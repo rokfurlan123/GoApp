@@ -1,4 +1,6 @@
 using Blazored.LocalStorage;
+using Blazored.Toast;
+using GoWebApp.Client.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,7 +23,9 @@ namespace GoWebApp.Client
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddBlazoredLocalStorage();
+            builder.Services.AddBlazoredToast();
             builder.Services.AddOptions();
+            builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddAuthorizationCore();
             builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
             await builder.Build().RunAsync();
