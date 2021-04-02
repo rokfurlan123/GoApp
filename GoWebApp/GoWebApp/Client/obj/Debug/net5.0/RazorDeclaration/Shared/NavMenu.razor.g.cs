@@ -138,7 +138,7 @@ using Blazored.Toast.Services;
 
     private async void Logout()
     {
-        await _localStorage.RemoveItemAsync("isAuthenticated");
+        await _localStorage.RemoveItemAsync("authToken");
         await _authStateProvider.GetAuthenticationStateAsync();
         _navManager.NavigateTo("/");
     }

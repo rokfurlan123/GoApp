@@ -24,7 +24,7 @@ Log in or <NavLink href="register">register</NavLink>
             <InputText id="password" @bind-Value="user.Password"></InputText>
         </div>
     </p>
-    <button type="submit" class="btn">Login</button>
+    <button type="submit" class="btn-danger">Login</button>
     <ValidationSummary></ValidationSummary>
 </EditForm>
 @code {
@@ -35,7 +35,7 @@ Log in or <NavLink href="register">register</NavLink>
         var result = await _authService.Login(user);
         if(result.Success)
         {
-            await _localStorage.SetItemAsync<bool>("isAuthenticated", true);
+            await _localStorage.SetItemAsync<string>("authToken", result.Data);
             await _authStateProvider.GetAuthenticationStateAsync();
         }
         else

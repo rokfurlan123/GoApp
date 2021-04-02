@@ -135,7 +135,7 @@ using Blazored.Toast.Services;
         var result = await _authService.Login(user);
         if(result.Success)
         {
-            await _localStorage.SetItemAsync<bool>("isAuthenticated", true);
+            await _localStorage.SetItemAsync<string>("authToken", result.Data);
             await _authStateProvider.GetAuthenticationStateAsync();
         }
         else
