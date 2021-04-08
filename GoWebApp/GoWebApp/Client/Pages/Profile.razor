@@ -1,7 +1,14 @@
 ﻿@page "/profile"
+@inject GoWebApp.Client.Services.IGetProfileService _getUser
 @attribute [Authorize]
 <h3>Profile</h3>
 
-@code {
+<p>@user.Username, @user.Email</p>
 
+@code {
+    User user;
+    protected override async Task OnInitializedAsync()
+    {
+        //user = await _getUser.GetProfileInfo();
+    }
 }

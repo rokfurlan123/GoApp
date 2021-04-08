@@ -4,6 +4,14 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.box-login{
+    max-width: 300px;
+}
+
+.box-register {
+    max-width: 340px;
+}
+
 a, .btn-link {
     color: #0366d6;
 }

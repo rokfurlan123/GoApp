@@ -2,40 +2,43 @@
 @using GoWebApp.Shared
 @inject NavigationManager _navManager
 @inject GoWebApp.Client.Services.IAuthService _authService
-@inject IToastService _toastService  
+@inject IToastService _toastService
 
+<h3>Register here or <NavLink href="login">Login here</NavLink></h3>
+<br />
 
-<h3>Register</h3>
+<div class="box-register">
+    <EditForm Model="@user" OnValidSubmit="HandleUserRegistration">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <InputText id="email" @bind-Value="user.Email" class="form-control"></InputText>
+            <ValidationMessage For="@(()=> user.Email)"></ValidationMessage>
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <InputText id="username" @bind-Value="user.Username" class="form-control"></InputText>
+            <ValidationMessage For="@(()=> user.Username)"></ValidationMessage>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <InputText id="password" @bind-Value="user.Password" class="form-control"></InputText>
+            <ValidationMessage For="@(()=> user.Password)"></ValidationMessage>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <InputText id="password" @bind-Value="user.ConfirmPassword" class="form-control"></InputText>
+            <ValidationMessage For="@(()=> user.ConfirmPassword)"></ValidationMessage>
+        </div>
+        <div class="form-group">
+            <label for="date">Date of Birth</label>
+            <InputDate id="datetime" @bind-Value="user.DateOfBirth" class="form-control"></InputDate>
+            <ValidationMessage For="@(()=> user.DateOfBirth)"></ValidationMessage>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </EditForm>
+</div>
 
-<EditForm Model="@user" OnValidSubmit="HandleUserRegistration">
-    <DataAnnotationsValidator></DataAnnotationsValidator>
-    <div class="form-group">
-        <label for="email">Email</label>
-        <InputText id="username" @bind-Value="user.Email"></InputText>
-        <ValidationMessage For="@(()=> user.Email)"></ValidationMessage>
-    </div>
-    <div class="form-group">
-        <label for="username">Username</label>
-        <InputText id="username" @bind-Value="user.Username"></InputText>
-        <ValidationMessage For="@(()=> user.Username)"></ValidationMessage>
-    </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <InputText id="username" @bind-Value="user.Password"></InputText>
-        <ValidationMessage For="@(()=> user.Password)"></ValidationMessage>
-    </div>
-    <div class="form-group">
-        <label for="confirmPassword">Confirm Password</label>
-        <InputText id="username" @bind-Value="user.ConfirmPassword"></InputText>
-        <ValidationMessage For="@(()=> user.ConfirmPassword)"></ValidationMessage>
-    </div>
-    <div class="form-group">
-        <label for="date">Date of Birth</label>
-        <InputDate id="datetime" @bind-Value="user.DateOfBirth"></InputDate>
-        <ValidationMessage For="@(()=> user.DateOfBirth)"></ValidationMessage>
-    </div>
-    <button type="submit" class="btn btn-primary">Register</button>
-</EditForm>
 
 
 @code {

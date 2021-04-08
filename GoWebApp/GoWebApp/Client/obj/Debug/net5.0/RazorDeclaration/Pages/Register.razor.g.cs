@@ -126,7 +126,7 @@ using GoWebApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 41 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Register.razor"
+#line 44 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Register.razor"
        
     private ProfileRegister user = new ProfileRegister();
 

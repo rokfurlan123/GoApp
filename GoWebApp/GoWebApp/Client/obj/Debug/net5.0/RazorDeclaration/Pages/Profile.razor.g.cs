@@ -118,7 +118,7 @@ using Blazored.Toast.Services;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Profile.razor"
+#line 3 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Profile.razor"
            [Authorize]
 
 #line default
@@ -132,6 +132,19 @@ using Blazored.Toast.Services;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 8 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Profile.razor"
+       
+    User user;
+    protected override async Task OnInitializedAsync()
+    {
+        //user = await _getUser.GetProfileInfo();
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private GoWebApp.Client.Services.IGetProfileService _getUser { get; set; }
     }
 }
 #pragma warning restore 1591

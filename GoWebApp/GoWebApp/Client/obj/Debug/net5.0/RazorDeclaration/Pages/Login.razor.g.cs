@@ -126,7 +126,7 @@ using Blazored.Toast.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 30 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Login.razor"
+#line 26 "D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\Pages\Login.razor"
        
     private ProfileLogIn user = new ProfileLogIn();
 

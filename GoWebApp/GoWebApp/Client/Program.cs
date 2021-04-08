@@ -28,6 +28,7 @@ namespace GoWebApp.Client
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddAuthorizationCore();
             builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
+            builder.Services.AddScoped<IGetProfileService, GetProfileService>();
             await builder.Build().RunAsync();
         }
     }
