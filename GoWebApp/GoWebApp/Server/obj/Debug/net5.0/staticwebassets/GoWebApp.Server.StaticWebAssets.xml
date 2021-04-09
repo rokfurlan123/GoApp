@@ -1,6 +1,6 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\bin\Debug\net5.0\wwwroot\" />
-  <ContentRoot BasePath="/" Path="D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\scopedcss\bundle\" />
-  <ContentRoot BasePath="/" Path="D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Client\wwwroot\" />
-  <ContentRoot BasePath="_content/Blazored.Toast" Path="C:\Users\rokfu\.nuget\packages\blazored.toast\3.1.2\build\..\staticwebassets\" />
+  <ContentRoot BasePath="/" Path="C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="/" Path="C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\wwwroot\" />
+  <ContentRoot BasePath="_content/Blazored.Toast" Path="C:\Users\rocky\.nuget\packages\blazored.toast\3.1.2\build\..\staticwebassets\" />
 </StaticWebAssets>

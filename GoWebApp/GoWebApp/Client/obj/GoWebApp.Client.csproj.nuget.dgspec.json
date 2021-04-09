@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Namizje\\githubstuff\\GoWebApp\\GoApp\\GoWebApp\\GoWebApp\\Client\\GoWebApp.Client.csproj": {}
+    "C:\\Users\\rocky\\Desktop\\githubRepos\\GoApp\\GoWebApp\\GoWebApp\\Client\\GoWebApp.Client.csproj": {}
   },
   "projects": {
-    "D:\\Namizje\\githubstuff\\GoWebApp\\GoApp\\GoWebApp\\GoWebApp\\Client\\GoWebApp.Client.csproj": {
+    "C:\\Users\\rocky\\Desktop\\githubRepos\\GoApp\\GoWebApp\\GoWebApp\\Client\\GoWebApp.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Namizje\\githubstuff\\GoWebApp\\GoApp\\GoWebApp\\GoWebApp\\Client\\GoWebApp.Client.csproj",
+        "projectUniqueName": "C:\\Users\\rocky\\Desktop\\githubRepos\\GoApp\\GoWebApp\\GoWebApp\\Client\\GoWebApp.Client.csproj",
         "projectName": "GoWebApp.Client",
-        "projectPath": "D:\\Namizje\\githubstuff\\GoWebApp\\GoApp\\GoWebApp\\GoWebApp\\Client\\GoWebApp.Client.csproj",
-        "packagesPath": "C:\\Users\\rokfu\\.nuget\\packages\\",
-        "outputPath": "D:\\Namizje\\githubstuff\\GoWebApp\\GoApp\\GoWebApp\\GoWebApp\\Client\\obj\\",
+        "projectPath": "C:\\Users\\rocky\\Desktop\\githubRepos\\GoApp\\GoWebApp\\GoWebApp\\Client\\GoWebApp.Client.csproj",
+        "packagesPath": "C:\\Users\\rocky\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rocky\\Desktop\\githubRepos\\GoApp\\GoWebApp\\GoWebApp\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\rokfu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rocky\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Namizje\\githubstuff\\GoWebApp\\GoApp\\GoWebApp\\GoWebApp\\Shared\\GoWebApp.Shared.csproj": {
-                "projectPath": "D:\\Namizje\\githubstuff\\GoWebApp\\GoApp\\GoWebApp\\GoWebApp\\Shared\\GoWebApp.Shared.csproj"
+              "C:\\Users\\rocky\\Desktop\\githubRepos\\GoApp\\GoWebApp\\GoWebApp\\Shared\\GoWebApp.Shared.csproj": {
+                "projectPath": "C:\\Users\\rocky\\Desktop\\githubRepos\\GoApp\\GoWebApp\\GoWebApp\\Shared\\GoWebApp.Shared.csproj"
               }
             }
           }
@@ -94,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -103,20 +104,21 @@
         }
       }
     },
-    "D:\\Namizje\\githubstuff\\GoWebApp\\GoApp\\GoWebApp\\GoWebApp\\Shared\\GoWebApp.Shared.csproj": {
+    "C:\\Users\\rocky\\Desktop\\githubRepos\\GoApp\\GoWebApp\\GoWebApp\\Shared\\GoWebApp.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Namizje\\githubstuff\\GoWebApp\\GoApp\\GoWebApp\\GoWebApp\\Shared\\GoWebApp.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\rocky\\Desktop\\githubRepos\\GoApp\\GoWebApp\\GoWebApp\\Shared\\GoWebApp.Shared.csproj",
         "projectName": "GoWebApp.Shared",
-        "projectPath": "D:\\Namizje\\githubstuff\\GoWebApp\\GoApp\\GoWebApp\\GoWebApp\\Shared\\GoWebApp.Shared.csproj",
-        "packagesPath": "C:\\Users\\rokfu\\.nuget\\packages\\",
-        "outputPath": "D:\\Namizje\\githubstuff\\GoWebApp\\GoApp\\GoWebApp\\GoWebApp\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\rocky\\Desktop\\githubRepos\\GoApp\\GoWebApp\\GoWebApp\\Shared\\GoWebApp.Shared.csproj",
+        "packagesPath": "C:\\Users\\rocky\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rocky\\Desktop\\githubRepos\\GoApp\\GoWebApp\\GoWebApp\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\rokfu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rocky\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -156,7 +158,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

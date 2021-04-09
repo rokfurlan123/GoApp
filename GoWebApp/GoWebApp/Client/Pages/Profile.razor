@@ -3,12 +3,20 @@
 @attribute [Authorize]
 <h3>Profile</h3>
 
-<p>@user.Username, @user.Email</p>
+@if(user == null)
+{
+    <span>Loading...</span>
+}
+else
+{
+    <h3>@user.Username</h3>
+    <h3>@user.Email</h3>
+}
 
 @code {
-    User user;
+    private User user;
     protected override async Task OnInitializedAsync()
     {
-        //user = await _getUser.GetProfileInfo();
+        user = await _getUser.GetProfileInfo();
     }
 }

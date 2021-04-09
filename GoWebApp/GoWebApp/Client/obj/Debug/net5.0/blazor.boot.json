@@ -198,12 +198,13 @@
       "mscorlib.dll": "sha256-Fi+LybwHL\/VGD\/09OxxtYlT6exn9xVU+LdojZ9juR2c=",
       "netstandard.dll": "sha256-P8xX0ad1hKyWWbBxiXl3cYokFlDiuXwp3pqoYatH0kk=",
       "System.Private.CoreLib.dll": "sha256-2km83sNUTrumGJYdDzsN8RnJqv00vKWLCCh0UGajTB4=",
-      "GoWebApp.Shared.dll": "sha256-EiH5epSHVRlI3txSY8cqZ8GXgtvmUj7e90nzUF3K+38=",
-      "GoWebApp.Client.dll": "sha256-4HoBV91x+Ktnl3vjO4qKrPh\/cLYx8miWqWIApdtCZKU="
+      "GoWebApp.Shared.dll": "sha256-uAu9p1aydASUtYq3PlfRV8qcxufNQvERrviAjxJ3DSI=",
+      "GoWebApp.Client.dll": "sha256-mbPzVZU0pRb6xq7U4vmtmIWfQ3vq1h7rQas7kUQNqQY="
     },
     "lazyAssembly": null,
     "pdb": {
-      "GoWebApp.Client.pdb": "sha256-2FWnO7iZCZLDisp7r5hqV14VimDJlZeEixvUXWK+Xbg="
+      "GoWebApp.Shared.pdb": "sha256-lYLxN7f9nVJxW7PDVHfWtr0OS\/8P94Veiz8iOz3B3Ss=",
+      "GoWebApp.Client.pdb": "sha256-vk\/4\/4fMocfTB84zMHpqqzrWTwPrikGW9gUuUWtlqms="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ibxaSjW7s3aLVssChknhzCpgMTHGu4D48Q9OLP3dfe8=",

@@ -1,4 +1,4 @@
-﻿using GoWebApp.Server.Data;
+﻿ using GoWebApp.Server.Data;
 using GoWebApp.Shared;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;

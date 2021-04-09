@@ -10,3 +10,15 @@ D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.dll
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\ref\GoWebApp.Shared.dll
 D:\Namizje\githubstuff\GoWebApp\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.pdb
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Shared\bin\Debug\net5.0\GoWebApp.Shared.deps.json
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Shared\bin\Debug\net5.0\GoWebApp.Shared.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Shared\bin\Debug\net5.0\ref\GoWebApp.Shared.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Shared\bin\Debug\net5.0\GoWebApp.Shared.pdb
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.csprojAssemblyReference.cache
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.AssemblyInfoInputs.cache
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.AssemblyInfo.cs
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\ref\GoWebApp.Shared.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Shared\obj\Debug\net5.0\GoWebApp.Shared.pdb

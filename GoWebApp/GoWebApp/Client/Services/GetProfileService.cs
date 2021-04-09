@@ -19,7 +19,7 @@ namespace GoWebApp.Client.Services
 
         public async Task<User> GetProfileInfo()
         {
-            var user = await _http.GetFromJsonAsync<User>("api/Profile/GetProfileInfo");
+            var user = await _http.GetFromJsonAsync<User>("api/User/GetUser");
             return user;
         }
     }
