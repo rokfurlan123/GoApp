@@ -34,6 +34,32 @@ namespace GoWebApp.Server.Controllers
             return Ok(user);
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateUser(int id, [FromBody]User profile)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == profile.Id);
+
+            user.Username = profile.Username;
+            user.Email = profile.Email;
+            user.DateOfBirth = profile.DateOfBirth;
+            if (profile.Img != null)
+            {
+                user.Img = profile.Img;
+            }
+            await _context.SaveChangesAsync();
+            return Ok();
+        }
+
+        //private int GetProfileId() => int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+        //private async Task<User> GetProfile() => await _context.Users.FirstOrDefaultAsync(x => x.Id == GetProfileId());
+
+        //[HttpGet("GetProfileInfo")]
+        //public async Task<IActionResult> GetProfileInfo()
+        //{
+        //    var user = await GetProfile();
+        //    return Ok(user);
+        //}
 
     }
 }

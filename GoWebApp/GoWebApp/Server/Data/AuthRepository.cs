@@ -45,6 +45,12 @@ namespace GoWebApp.Server.Data
             return response;
 
         }
+        //moj response
+        
+        //public async Task<ServiceResponse<int>> Update(User user)
+        //{
+        //    if()
+        //}
 
         public async Task<ServiceResponse<int>> Register(User user, string password)
         {

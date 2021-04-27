@@ -29,7 +29,10 @@ namespace GoWebApp.Server.Controllers
                     Username = request.Username,
                     Email = request.Email,
                     DateOfBirth = request.DateOfBirth, 
-                    IsConfirmed = request.isConfirmed
+                    IsConfirmed = request.isConfirmed,
+                    Img = null,
+                    Wins = 0,
+                    Loses = 0
                 }, request.Password);
 
             if(!response.Success)

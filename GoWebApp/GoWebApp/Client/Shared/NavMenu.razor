@@ -19,10 +19,16 @@
                     </NavLink>
                 </li>
                 <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="/chat" Match="NavLinkMatch.All">
+                        <span class="oi oi-home" aria-hidden="true"></span> Chat
+                    </NavLink>
+                    </li>
+                <li class="nav-item px-3">
                     <a class="nav-link" @onclick="Logout" style="cursor:pointer">
-                        <span class="oi oi-account-logout" aria-hidden="true"></span>Logout        
+                        <span class="oi oi-account-logout" aria-hidden="true"></span>Logout
                     </a>
                 </li>
+
             </ul>
         </div>
     </Authorized>

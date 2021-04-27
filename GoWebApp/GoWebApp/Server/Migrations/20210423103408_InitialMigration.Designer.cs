@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GoWebApp.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210328205135_User")]
-    partial class User
+    [Migration("20210423103408_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,10 +33,16 @@ namespace GoWebApp.Server.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Img")
+                        .HasColumnType("TEXT");
+
                     b.Property<bool>("IsConfirmed")
                         .HasColumnType("INTEGER");
 
                     b.Property<bool>("IsDeleted")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Loses")
                         .HasColumnType("INTEGER");
 
                     b.Property<byte[]>("PasswordHash")
@@ -47,6 +53,9 @@ namespace GoWebApp.Server.Migrations
 
                     b.Property<string>("Username")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("Wins")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 

@@ -192,3 +192,15 @@ C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\obj\Debug\net5
 C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\obj\Debug\net5.0\GoWebApp.Server.Views.pdb
 C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\obj\Debug\net5.0\GoWebApp.Server.csproj.CopyComplete
 C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\obj\Debug\net5.0\GoWebApp.Server.genruntimeconfig.cache
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\bin\Debug\net5.0\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Server\bin\Debug\net5.0\SixLabors.ImageSharp.dll

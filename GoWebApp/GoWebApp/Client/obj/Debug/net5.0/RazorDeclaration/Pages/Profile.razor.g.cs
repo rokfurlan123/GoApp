@@ -118,7 +118,21 @@ using Blazored.Toast.Services;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Profile.razor"
+#line 16 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\_Imports.razor"
+using System.Drawing;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Profile.razor"
+using Microsoft.AspNetCore.WebUtilities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Profile.razor"
            [Authorize]
 
 #line default
@@ -133,17 +147,31 @@ using Blazored.Toast.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 16 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Profile.razor"
+#line 45 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Profile.razor"
        
+
     private User user;
+    int matches;
     protected override async Task OnInitializedAsync()
     {
         user = await _getUser.GetProfileInfo();
+        matches = user.Loses + user.Wins;
     }
+
+    private void EditProfile()
+    {
+        var parameter = new Dictionary<string, string>
+        {
+            ["id"] = Convert.ToString(user.Id)
+        };
+        _navManager.NavigateTo(QueryHelpers.AddQueryString("profileedit", parameter));
+    }
+
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager _navManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private GoWebApp.Client.Services.IGetProfileService _getUser { get; set; }
     }
 }

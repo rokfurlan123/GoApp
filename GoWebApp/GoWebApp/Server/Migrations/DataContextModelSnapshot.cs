@@ -31,10 +31,16 @@ namespace GoWebApp.Server.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Img")
+                        .HasColumnType("TEXT");
+
                     b.Property<bool>("IsConfirmed")
                         .HasColumnType("INTEGER");
 
                     b.Property<bool>("IsDeleted")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Loses")
                         .HasColumnType("INTEGER");
 
                     b.Property<byte[]>("PasswordHash")
@@ -45,6 +51,9 @@ namespace GoWebApp.Server.Migrations
 
                     b.Property<string>("Username")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("Wins")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 

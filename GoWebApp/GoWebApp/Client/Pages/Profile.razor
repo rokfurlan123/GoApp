@@ -1,22 +1,71 @@
 ﻿@page "/profile"
 @inject GoWebApp.Client.Services.IGetProfileService _getUser
+@inject NavigationManager _navManager
+@using Microsoft.AspNetCore.WebUtilities
 @attribute [Authorize]
-<h3>Profile</h3>
 
-@if(user == null)
+
+@if (user == null)
 {
     <span>Loading...</span>
 }
 else
 {
-    <h3>@user.Username</h3>
-    <h3>@user.Email</h3>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-auto">
+                @if (user.Img == null)
+                {
+                    <img src="/Images/no_image.png" height="400" width="400" asp-append-version="true" />
+                    @* ~ ne dela, bug al neki. col-auto ker pac navaden ne dela idk cudni so *@
+                }
+                else
+                {
+                    <img src="@user.Img" height="400" width="400" asp-append-version="true" />
+                }
+            </div>
+            <div class="col-auto">
+                <h2>Profile Data</h2>
+                <h3>Username: @user.Username</h3>
+                <h3>Email: @user.Email</h3>
+                <h3>Wins: @user.Wins</h3>
+                <h3>Loses: @user.Loses</h3>
+                <h3>Matches: @matches</h3>
+            </div>
+        </div>
+    </div>
+    <br />
+    <button class="btn-primary" @onclick="EditProfile">Edit profile</button>
+
+
+
 }
 
 @code {
+
     private User user;
+    int matches;
     protected override async Task OnInitializedAsync()
     {
         user = await _getUser.GetProfileInfo();
+        matches = user.Loses + user.Wins;
     }
+
+    private void EditProfile()
+    {
+        var parameter = new Dictionary<string, string>
+        {
+            ["id"] = Convert.ToString(user.Id)
+        };
+        _navManager.NavigateTo(QueryHelpers.AddQueryString("profileedit", parameter));
+    }
+
 }
+@*
+    var parameter = new Dictionary<string, string>
+        {
+            ["id"] = Convert.ToString(user.Id)
+        };
+        _navManager.NavigateTo(QueryHelpers.AddQueryString("profiledetails", parameter));
+*@

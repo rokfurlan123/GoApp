@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GoWebApp.Server.Migrations
 {
-    public partial class User : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -20,7 +20,10 @@ namespace GoWebApp.Server.Migrations
                     DateOfBirth = table.Column<DateTime>(type: "TEXT", nullable: false),
                     IsConfirmed = table.Column<bool>(type: "INTEGER", nullable: false),
                     IsDeleted = table.Column<bool>(type: "INTEGER", nullable: false),
-                    DateCreated = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    DateCreated = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Img = table.Column<string>(type: "TEXT", nullable: true),
+                    Wins = table.Column<int>(type: "INTEGER", nullable: false),
+                    Loses = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

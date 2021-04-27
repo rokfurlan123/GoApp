@@ -6,5 +6,6 @@ namespace GoWebApp.Client.Services
     public interface IGetProfileService
     {
         Task<User> GetProfileInfo();
+        Task UpdateProfile(User profile);
     }
 }

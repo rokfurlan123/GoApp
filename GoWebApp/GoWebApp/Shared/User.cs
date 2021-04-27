@@ -17,5 +17,8 @@ namespace GoWebApp.Shared
         public bool IsConfirmed { get; set; }
         public bool IsDeleted { get; set; }
         public DateTime DateCreated { get; set; } = DateTime.Now;
+        public string Img{ get; set; }
+        public int Wins { get; set; }
+        public int Loses { get; set; }
     }
 }

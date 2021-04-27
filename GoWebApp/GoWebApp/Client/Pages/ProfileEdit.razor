@@ -1,0 +1,104 @@
+﻿@page "/profileedit"
+@inject GoWebApp.Client.Services.IGetProfileService _getUser
+@using Microsoft.AspNetCore.WebUtilities
+@inject NavigationManager _navManager
+@inject IToastService _toastService
+@attribute [Authorize]
+
+<h3>Edit profile</h3>
+<br />
+@if (user == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-auto">
+                <div class="box-register">
+                    <EditForm Model="@user" OnValidSubmit="UpdateData">
+                        <div class="form-control-file">
+                            <label for="image">Image</label>
+                            <InputFile OnChange="FileChange"></InputFile>
+                        </div>
+                        <DataAnnotationsValidator></DataAnnotationsValidator>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <InputText id="email" @bind-Value="user.Email" class="form-control"></InputText>
+                            <ValidationMessage For="@(()=> user.Email)"></ValidationMessage>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <InputText id="username" @bind-Value="user.Username" class="form-control"></InputText>
+                            <ValidationMessage For="@(()=> user.Username)"></ValidationMessage>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date of Birth</label>
+                            <InputDate id="datetime" @bind-Value="user.DateOfBirth" class="form-control"></InputDate>
+                            <ValidationMessage For="@(()=> user.DateOfBirth)"></ValidationMessage>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Profile</button>
+                    </EditForm>
+                </div>
+            </div>
+            <div class="col-auto">
+                @if (uploadedPhoto != null)
+                {
+                    <img src="@uploadedPhoto" height="400" width="400" asp-append-version="true" />
+                }
+            </div>
+        </div>
+    </div>
+    
+}
+
+@code {
+
+    private User user;
+    string uploadedPhoto = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        user = await _getUser.GetProfileInfo();
+    }
+
+    async Task FileChange(InputFileChangeEventArgs e)
+    {
+        var format = "image/png";
+        var resizedImage = await e.File.RequestImageFileAsync(format, 300, 300);
+        var buffer = new byte[resizedImage.Size];
+        await resizedImage.OpenReadStream().ReadAsync(buffer);
+        var imageData = $"data:{format};base64,{Convert.ToBase64String(buffer)}";
+        uploadedPhoto = imageData;
+        user.Img = imageData;
+    }
+
+    private async Task UpdateData()
+    {
+        await _getUser.UpdateProfile(user);
+    }
+}
+@*
+    [Parameter]
+    public int UserId { get; set; }
+    private int id;
+    private User user;
+
+     "/profiledetails/{id}"
+
+    var uri = _navManager.ToAbsoluteUri(_navManager.Uri);
+    var queryString = QueryHelpers.ParseQuery(uri.Query);
+    if (queryString.TryGetValue("id", out var locaId))
+    {
+        try
+        {
+            id = Convert.ToInt32(locaId);
+        }
+        catch(Exception e)
+        {
+            _toastService.ShowError(Convert.ToString(e));
+        }
+
+    }
+*@
