@@ -125,14 +125,21 @@ using System.Drawing;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Chat.razor"
+#line 2 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Chat.razor"
+using Microsoft.AspNetCore.SignalR.Client;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Chat.razor"
            [Authorize]
 
 #line default
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/chat")]
-    public partial class Chat : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Chat : Microsoft.AspNetCore.Components.ComponentBase, IAsyncDisposable
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -140,17 +147,49 @@ using System.Drawing;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Chat.razor"
+#line 31 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Chat.razor"
        
-    private void Room1()
+    private HubConnection hubConnection;
+    private List<string> messages = new List<string>();
+    private string userInput = "neki";
+    private string messageInput;
+
+    protected override async Task OnInitializedAsync()
     {
-        
+        var token = "tsafasfa   ";
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl(NavigationManager.ToAbsoluteUri("/gohub"), options => {
+                //options.AccessTokenProvider = () => Task.FromResult();
+                options.Headers.Add("Authorization", $"Bearer {token}");
+            })
+            .Build();
+
+        hubConnection.On<string, string>("ReceiveMessage", (user, message) =>
+        {
+            var encodedMsg = $"{user}: {message}";
+            messages.Add(encodedMsg);
+            StateHasChanged();
+        });
+
+        await hubConnection.StartAsync();
+    }
+
+    async Task Send() =>
+        await hubConnection.SendAsync("SendMessage", userInput, messageInput);
+
+    public bool IsConnected =>
+        hubConnection.State == HubConnectionState.Connected;
+
+    public async ValueTask DisposeAsync()
+    {
+        await hubConnection.DisposeAsync();
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager _nav { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Microsoft.Extensions.Configuration.IConfiguration _iconfig { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
     }
 }
 #pragma warning restore 1591
