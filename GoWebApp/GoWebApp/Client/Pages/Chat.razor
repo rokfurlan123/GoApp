@@ -2,45 +2,51 @@
 @using Microsoft.AspNetCore.SignalR.Client
 @inject NavigationManager NavigationManager
 @inject Microsoft.Extensions.Configuration.IConfiguration _iconfig
+@inject GoWebApp.Client.Services.IGetProfileService _getUser
 @implements IAsyncDisposable
 @attribute [Authorize]
 
-<div class="form-group">
-    <label>
-        User:
-        <input @bind="userInput" />
-    </label>
-</div>
-<div class="form-group">
-    <label>
-        Message:
-        <input @bind="messageInput" size="50" />
-    </label>
-</div>
-<button @onclick="Send" disabled="@(!IsConnected)">Send</button>
+@if (username != null)
+{
+    <div class="form-group">
+        Username: @username
+        <br />
+        <div class="form-group">
+            <label>
+                Message:
+                <input @bind="messageInput" size="50" />
+            </label>
+        </div>
+        <button @onclick="Send" disabled="@(!IsConnected)">Send</button>
+    </div>
+    <hr>
 
-<hr>
+    <ul id="messagesList">
+        @foreach (var message in messages)
+        {
+            <li>@message</li>
+        }
+    </ul>
+}
 
-<ul id="messagesList">
-    @foreach (var message in messages)
-    {
-        <li>@message</li>
-    }
-</ul>
+
 
 @code {
     private HubConnection hubConnection;
     private List<string> messages = new List<string>();
-    private string userInput = "neki";
+    private string username = null;
     private string messageInput;
 
     protected override async Task OnInitializedAsync()
     {
+        var neki = await _getUser.GetProfileInfo();
+        username = neki.Username;
         var token = "token2"; // to se mora ujemat szi tem kar mas pod jwt bearer token
         hubConnection = new HubConnectionBuilder()
-            .WithUrl(NavigationManager.ToAbsoluteUri("/gohub"), options => {
-                //options.AccessTokenProvider = () => Task.FromResult();
-                options.Headers.Add("Authorization", $"Bearer {token}");
+            .WithUrl(NavigationManager.ToAbsoluteUri("/gohub"), options =>
+            {
+            //options.AccessTokenProvider = () => Task.FromResult();
+            options.Headers.Add("Authorization", $"Bearer {token}");
             })
             .Build();
 
@@ -55,7 +61,7 @@
     }
 
     async Task Send() =>
-        await hubConnection.SendAsync("SendMessage", userInput, messageInput);
+        await hubConnection.SendAsync("SendMessage", username, messageInput);
 
     public bool IsConnected =>
         hubConnection.State == HubConnectionState.Connected;

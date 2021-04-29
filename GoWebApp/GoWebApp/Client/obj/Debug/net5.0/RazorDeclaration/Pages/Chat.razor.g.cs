@@ -132,7 +132,7 @@ using Microsoft.AspNetCore.SignalR.Client;
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Chat.razor"
+#line 7 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Chat.razor"
            [Authorize]
 
 #line default
@@ -147,20 +147,23 @@ using Microsoft.AspNetCore.SignalR.Client;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 31 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Chat.razor"
+#line 34 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Chat.razor"
        
     private HubConnection hubConnection;
     private List<string> messages = new List<string>();
-    private string userInput = "neki";
+    private string username = null;
     private string messageInput;
 
     protected override async Task OnInitializedAsync()
     {
-        var token = "tsafasfa   ";
+        var neki = await _getUser.GetProfileInfo();
+        username = neki.Username;
+        var token = "token2"; // to se mora ujemat szi tem kar mas pod jwt bearer token
         hubConnection = new HubConnectionBuilder()
-            .WithUrl(NavigationManager.ToAbsoluteUri("/gohub"), options => {
-                //options.AccessTokenProvider = () => Task.FromResult();
-                options.Headers.Add("Authorization", $"Bearer {token}");
+            .WithUrl(NavigationManager.ToAbsoluteUri("/gohub"), options =>
+            {
+            //options.AccessTokenProvider = () => Task.FromResult();
+            options.Headers.Add("Authorization", $"Bearer {token}");
             })
             .Build();
 
@@ -175,7 +178,7 @@ using Microsoft.AspNetCore.SignalR.Client;
     }
 
     async Task Send() =>
-        await hubConnection.SendAsync("SendMessage", userInput, messageInput);
+        await hubConnection.SendAsync("SendMessage", username, messageInput);
 
     public bool IsConnected =>
         hubConnection.State == HubConnectionState.Connected;
@@ -188,6 +191,7 @@ using Microsoft.AspNetCore.SignalR.Client;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private GoWebApp.Client.Services.IGetProfileService _getUser { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private Microsoft.Extensions.Configuration.IConfiguration _iconfig { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
     }

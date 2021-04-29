@@ -210,12 +210,12 @@
       "netstandard.dll": "sha256-P8xX0ad1hKyWWbBxiXl3cYokFlDiuXwp3pqoYatH0kk=",
       "System.Private.CoreLib.dll": "sha256-2km83sNUTrumGJYdDzsN8RnJqv00vKWLCCh0UGajTB4=",
       "GoWebApp.Shared.dll": "sha256-P+M2AOQMlA3K31Rdz2OBL06Py5S8iBsPxG6lYFtbrqw=",
-      "GoWebApp.Client.dll": "sha256-zZOnNFPTEMyi5SSz5fRkHKwl8opiSBf2qih+nt9H9HQ="
+      "GoWebApp.Client.dll": "sha256-56wxw0\/HKwvOK2vasCoK\/585ROpwKNzqubs2X0+dNxs="
     },
     "lazyAssembly": null,
     "pdb": {
       "GoWebApp.Shared.pdb": "sha256-6AD2qJZaA\/pJ4HCYvfZJ6sy+W\/mNTQQpm\/\/4jOkdmTw=",
-      "GoWebApp.Client.pdb": "sha256-gaNeB2hUzNOFgiJu5GXba6gcmotW64y65Tf6vnG6y3I="
+      "GoWebApp.Client.pdb": "sha256-UEOe+pJ5PVN2oHAOlD\/MVf21FmE6bwfvwm15liEjWH0="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ibxaSjW7s3aLVssChknhzCpgMTHGu4D48Q9OLP3dfe8=",
