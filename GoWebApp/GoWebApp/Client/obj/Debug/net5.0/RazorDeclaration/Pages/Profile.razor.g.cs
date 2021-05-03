@@ -147,7 +147,7 @@ using Microsoft.AspNetCore.WebUtilities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 45 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Profile.razor"
+#line 46 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Profile.razor"
        
 
     private User user;

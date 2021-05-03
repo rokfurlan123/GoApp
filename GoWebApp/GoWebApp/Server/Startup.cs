@@ -19,17 +19,14 @@ namespace GoWebApp.Server
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration/*, DataContext context*/)
+        public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            //DbContext = context;
+            //dbcontexta se ne injecta v startup!!!
         }
 
         public IConfiguration Configuration { get; }
-        //public DataContext DbContext { get; private set; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+       
         public void ConfigureServices(IServiceCollection services)
         {
             
@@ -48,19 +45,7 @@ namespace GoWebApp.Server
                         ValidateIssuer = false,
                         ValidateAudience = false
                     };
-                    //options.Events = new JwtBearerEvents
-                    //{
-                    //    OnMessageReceived = DbContext =>
-                    //    {
-                    //        var accessToken = Configuration.GetSection("AppSettings:Token").Value;
-                    //        var path = DbContext.HttpContext.Request.Path;
-                    //        if(!string.IsNullOrEmpty(accessToken)&&(path.StartsWithSegments("/hubs")))
-                    //        {
-                    //            DbContext.Token = accessToken;
-                    //        }
-                    //        return Task.CompletedTask;
-                    //    }
-                    //};
+                    
                 })
                 .AddJwtBearer("Signalr", options =>
                 {

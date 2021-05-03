@@ -8,25 +8,36 @@
 
 @if (username != null)
 {
-    <div class="form-group">
-        Username: @username
-        <br />
-        <div class="form-group">
-            <label>
-                Message:
-                <input @bind="messageInput" size="50" />
-            </label>
-        </div>
-        <button @onclick="Send" disabled="@(!IsConnected)">Send</button>
-    </div>
-    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-auto">
+               <p>List of all people/click for chat</p>
+            </div>
+            <div class="col-auto">
+                <p>chat window. You can type, it works now. All of the clients connected at the same time see this</p>
+                <div class="form-group">
+                    Username: @username
+                    <br />
+                    <div class="form-group">
+                        <label>
+                            Message:
+                            <input @bind="messageInput" size="50" />
+                        </label>
+                    </div>
+                    <button @onclick="Send" disabled="@(!IsConnected)">Send</button>
+                </div>
+                <hr>
 
-    <ul id="messagesList">
-        @foreach (var message in messages)
-        {
-            <li>@message</li>
-        }
-    </ul>
+                <ul id="messagesList">
+                    @foreach (var message in messages)
+                    {
+                        <li>@message</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+   
 }
 
 

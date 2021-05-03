@@ -147,7 +147,7 @@ using Microsoft.AspNetCore.SignalR.Client;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 34 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Chat.razor"
+#line 45 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Chat.razor"
        
     private HubConnection hubConnection;
     private List<string> messages = new List<string>();
