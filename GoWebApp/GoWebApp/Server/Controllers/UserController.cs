@@ -45,9 +45,21 @@ namespace GoWebApp.Server.Controllers
             if (profile.Img != null)
             {
                 user.Img = profile.Img;
-            }
+            } 
             await _context.SaveChangesAsync();
             return Ok();
+        }
+        
+        [HttpGet("GetAllUsernames")]
+        public async Task<IActionResult> GetAllUsernames()
+        {
+            var allUsers = await _context.Users.ToListAsync();
+            var parsedNames = new List<String>();
+            foreach(var name in allUsers)
+            {
+                parsedNames.Add(name.Username);
+            }
+            return Ok(parsedNames);
         }
 
         //private int GetProfileId() => int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));

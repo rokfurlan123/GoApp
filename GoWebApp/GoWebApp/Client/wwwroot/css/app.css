@@ -1,5 +1,52 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+.chatbox {
+    width: 450px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border: 1px solid;
+}
+
+.chatHeader {
+    color: black;
+    padding: 15px;
+    border: 1px solid;
+    border-color: black;
+    background-color:whitesmoke;
+}
+
+.chatBody {
+    flex: 1;
+    color: white;
+    background-color: white;
+    padding: 20px 30px;
+    border: 1px solid;
+    border-color: black;
+}
+
+.chatFooter {
+    border: 1px solid;
+    border-color: black;
+}
+
+.chatFooter form{
+    display:flex;
+}
+form input{
+    flex: 1;
+    height:40px;
+    border:solid;
+    outline:none;
+    padding-left:5px;
+    font-size: 16px;
+}
+form button{
+    width:100px;
+    font-size:18px;
+}
+
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }

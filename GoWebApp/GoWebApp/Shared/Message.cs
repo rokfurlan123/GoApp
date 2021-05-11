@@ -11,7 +11,9 @@ namespace GoWebApp.Shared
         public int Id { get; set; }
         public string SenderUsername { get; set; }
         public string ReceiverUsername { get; set; }
+        public int MessageOrder { get; set; } 
         public DateTime DateMessageSent { get; set; } = DateTime.Now;
 
     }
+
 }

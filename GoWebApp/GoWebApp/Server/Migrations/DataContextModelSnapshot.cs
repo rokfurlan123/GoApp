@@ -16,6 +16,29 @@ namespace GoWebApp.Server.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.4");
 
+            modelBuilder.Entity("GoWebApp.Shared.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DateMessageSent")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("MessageOrder")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ReceiverUsername")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SenderUsername")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Messages");
+                });
+
             modelBuilder.Entity("GoWebApp.Shared.User", b =>
                 {
                     b.Property<int>("Id")

@@ -27,5 +27,11 @@ namespace GoWebApp.Client.Services
         {
             var response = await _http.PutAsJsonAsync<User>($"api/User/{profile.Id}", profile);
         }
+
+        public async Task<List<string>> GetAllUsers()
+        {
+            var userList = await _http.GetFromJsonAsync<List<string>>("api/User/GetAllUsernames");
+            return userList;
+        }
     }
 }

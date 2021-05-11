@@ -147,17 +147,21 @@ using Microsoft.AspNetCore.SignalR.Client;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 45 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Chat.razor"
+#line 74 "C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\Pages\Chat.razor"
        
     private HubConnection hubConnection;
     private List<string> messages = new List<string>();
     private string username = null;
     private string messageInput;
+    public List<string> listOfNames; //ce je task zraven, moras unwrappat task z await!
+    private string selectedPerson = "neki";
 
     protected override async Task OnInitializedAsync()
     {
-        var neki = await _getUser.GetProfileInfo();
-        username = neki.Username;
+        listOfNames = await _getUser.GetAllUsers(); // dobis vsa imena iz baze
+
+        var user = await _getUser.GetProfileInfo(); // dobis tvoj username, za chat username
+        username = user.Username;
         var token = "token2"; // to se mora ujemat szi tem kar mas pod jwt bearer token
         hubConnection = new HubConnectionBuilder()
             .WithUrl(NavigationManager.ToAbsoluteUri("/gohub"), options =>
@@ -187,6 +191,13 @@ using Microsoft.AspNetCore.SignalR.Client;
     {
         await hubConnection.DisposeAsync();
     }
+
+    public void SelectChat(string name)
+    {
+        selectedPerson = name;
+    }
+
+
 
 #line default
 #line hidden

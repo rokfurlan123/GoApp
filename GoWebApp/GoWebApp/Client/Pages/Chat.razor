@@ -11,9 +11,38 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-auto">
-               <p>List of all people/click for chat</p>
+                <p>List of all people/click for chat</p>
+                <br />
+                @if (listOfNames != null)
+                {
+                    <div class="container vertical-scrollable overflow-auto">
+                        <ul>
+                            @foreach (var name in listOfNames)
+                            {
+                                <li>
+                                    <a @onclick="@(() => SelectChat(name))">@name</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                }
             </div>
             <div class="col-auto">
+                <div class="chatbox">
+                    <div class="chatHeader">
+                        <p>Send Message to: @selectedPerson</p>
+                    </div>
+                    <div class="chatBody">
+
+                    </div>
+                    <div class="chatFooter">
+                        <form>
+                            <input type="text" name="message" />
+                            <button>Send</button>
+                        </form>
+                        
+                    </div>
+                </div>
                 <p>chat window. You can type, it works now. All of the clients connected at the same time see this</p>
                 <div class="form-group">
                     Username: @username
@@ -27,17 +56,17 @@
                     <button @onclick="Send" disabled="@(!IsConnected)">Send</button>
                 </div>
                 <hr>
-
                 <ul id="messagesList">
                     @foreach (var message in messages)
                     {
                         <li>@message</li>
                     }
                 </ul>
+
             </div>
         </div>
     </div>
-   
+
 }
 
 
@@ -47,11 +76,15 @@
     private List<string> messages = new List<string>();
     private string username = null;
     private string messageInput;
+    public List<string> listOfNames; //ce je task zraven, moras unwrappat task z await!
+    private string selectedPerson = "neki";
 
     protected override async Task OnInitializedAsync()
     {
-        var neki = await _getUser.GetProfileInfo();
-        username = neki.Username;
+        listOfNames = await _getUser.GetAllUsers(); // dobis vsa imena iz baze
+
+        var user = await _getUser.GetProfileInfo(); // dobis tvoj username, za chat username
+        username = user.Username;
         var token = "token2"; // to se mora ujemat szi tem kar mas pod jwt bearer token
         hubConnection = new HubConnectionBuilder()
             .WithUrl(NavigationManager.ToAbsoluteUri("/gohub"), options =>
@@ -81,4 +114,36 @@
     {
         await hubConnection.DisposeAsync();
     }
+
+    public void SelectChat(string name)
+    {
+        selectedPerson = name;
+    }
+
+
 }
+
+@*
+    <div class="col-auto">
+                <p>chat window. You can type, it works now. All of the clients connected at the same time see this</p>
+                <div class="form-group">
+                    Username: @username
+                    <br />
+                    <div class="form-group">
+                        <label>
+                            Message:
+                            <input @bind="messageInput" size="50" />
+                        </label>
+                    </div>
+                    <button @onclick="Send" disabled="@(!IsConnected)">Send</button>
+                </div>
+                <hr>
+                <ul id="messagesList">
+                    @foreach (var message in messages)
+                    {
+                        <li>@message</li>
+                    }
+                </ul>
+
+            </div>
+*@

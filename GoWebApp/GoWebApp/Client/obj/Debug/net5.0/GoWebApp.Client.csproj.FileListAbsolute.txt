@@ -1329,3 +1329,5 @@ C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5
 C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\Razor\Pages\ProfileEdit.razor.g.cs
 C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\xekfkuxA.gz
 C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\build-gz\eFWR2Q23.gz
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\RazorDeclaration\Pages\GameRoom.razor.g.cs
+C:\Users\rocky\Desktop\githubRepos\GoApp\GoWebApp\GoWebApp\Client\obj\Debug\net5.0\Razor\Pages\GameRoom.razor.g.cs

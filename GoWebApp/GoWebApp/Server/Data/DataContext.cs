@@ -14,5 +14,6 @@ namespace GoWebApp.Server.Data
 
         }
         public DbSet<User> Users { get; set; }
+       
     }
 }
